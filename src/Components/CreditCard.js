@@ -22,7 +22,6 @@ function CreditCard(props) {
                     <p className="card-text" style={{color: `${props.color}`}}>{props.bank}</p>
                 </div>
                 <p className="card-text m-0" style={{color: `${props.color}`}}>{props.owner}</p>
-
         </div>
 
     );
