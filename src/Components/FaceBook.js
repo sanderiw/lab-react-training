@@ -47,9 +47,9 @@ class FaceBook extends React.Component {
         this.reset()
         setTimeout(() => {
             this.setState({profileObj: this.state.profileObj.filter((profile) => {
-                const firstName = profile.firstName.toLowerCase() === this.state.searchText.toLowerCase();
-                const lastName = profile.lastName.toLowerCase() === this.state.searchText.toLowerCase();
-                const country = profile.country.toLowerCase() === this.state.searchText.toLowerCase();
+                const firstName = profile.firstName.toLowerCase().includes(this.state.searchText.toLowerCase());
+                const lastName = profile.lastName.toLowerCase().includes(this.state.searchText.toLowerCase());
+                const country = profile.country.toLowerCase().includes(this.state.searchText.toLowerCase());
         
                 return firstName || lastName || country;
             })})
