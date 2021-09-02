@@ -9,6 +9,14 @@ import BoxColor from './Components/BoxColor';
 import CreditCard from './Components/CreditCard';
 import Rating from './Components/Rating';
 import DriverCard from './Components/DriverCard';
+import LikeButton from './Components/LikeButton';
+import ClickablePicture from './Components/ClickablePicture';
+import Dice from './Components/Dice';
+import Carousel from './Components/Carousel';
+import NumbersTable from './Components/NumbersTable';
+import FaceBook from './Components/FaceBook';
+
+
 
 function App() {
   return (
@@ -108,6 +116,44 @@ function App() {
           model: "Audi A3",
           licensePlate: "BE33ER"
         }} />
+        
+
+        <hr/>
+        <h1>LikeButton</h1>
+        <LikeButton/>
+        <LikeButton/>
+
+
+        <hr/>
+        <h1>Clikable Picture</h1>
+        <ClickablePicture
+          img='./img/persons/maxence.png'
+          imgClicked='./img/persons/maxence-glasses.png'
+        />
+
+        <hr/>
+        <h1>Dice</h1>
+        <Dice/>
+
+        <hr/>
+        <h1>Carousel</h1>
+        <Carousel
+          imgs={[
+            'https://randomuser.me/api/portraits/women/1.jpg',
+            'https://randomuser.me/api/portraits/men/1.jpg',
+            'https://randomuser.me/api/portraits/women/2.jpg',
+            'https://randomuser.me/api/portraits/men/2.jpg'
+          ]}
+        />
+
+        <hr/>
+        <h1>Numbers Tables</h1>
+        <NumbersTable limit={12} />
+        
+        <hr/>
+        <h1>Facebook</h1>
+        <FaceBook />
+
 
     </div>
   );

@@ -13,9 +13,6 @@ function Rating(props) {
         }
 
         return starsArray;
-           
-        
-
     }
     return (
         <div>
