@@ -44,7 +44,7 @@ class FaceBook extends React.Component {
 
     search = (event) => {
         event.preventDefault();
-        this.reset()
+        this.setState({profileObj: this.state.originalProfiles});
         setTimeout(() => {
             this.setState({profileObj: this.state.profileObj.filter((profile) => {
                 const firstName = profile.firstName.toLowerCase().includes(this.state.searchText.toLowerCase());
@@ -57,7 +57,8 @@ class FaceBook extends React.Component {
         
     }
 
-    reset = () => {
+    reset = (event) => {
+        event.preventDefault();
         this.setState({profileObj: this.state.originalProfiles});
     }
 
@@ -66,7 +67,7 @@ class FaceBook extends React.Component {
             <div>
             {this.uniqueCountries.map((country) => {
                 return (
-                    <button className="m-1" onClick={this.paintBackground}>{country}</button>
+                    <button className="m-1" onClick={this.paintBackground} style={{backgroundColor: this.state.selectedCountry === country ? "blue" : "white"}}>{country}</button>
                 );
             })}
 
