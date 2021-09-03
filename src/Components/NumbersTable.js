@@ -21,7 +21,7 @@ class NumbersTable extends React.Component {
         return (
             <div className="row tile-row">
                 {numbersArray.map((number) => {
-                    return <div style={{backgroundColor: (number % 2 === 0 ? "red" : "white"), height: "150px"}} className="col-2 border border-dark tile">{number}</div>
+                    return <div key={number} style={{backgroundColor: (number % 2 === 0 ? "red" : "white"), height: "150px"}} className="col-2 border border-dark tile">{number}</div>
                 })}
             </div>
         );

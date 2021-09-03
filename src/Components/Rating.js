@@ -2,8 +2,8 @@ function Rating(props) {
     function stars(number) {
         const numberOfStars = 5;
         const roundedNumber = Math.round(number);
-        const emptyStar = <i class="far fa-star"></i>
-        const checkedStar = <i class="fas fa-star"></i>
+        const emptyStar = <i className="far fa-star"></i>
+        const checkedStar = <i className="fas fa-star"></i>
         const starsArray = [];
         for (let i = 0; i < roundedNumber; i++) {
             starsArray.push(checkedStar);
@@ -16,7 +16,7 @@ function Rating(props) {
     }
     return (
         <div>
-            {stars(props.children).map((star) => star)}
+            {stars(props.children).map((star, index) => <span key={index}>{star}</span>)}
         </div>
     );
 }

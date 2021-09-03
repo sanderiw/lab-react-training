@@ -67,7 +67,7 @@ class FaceBook extends React.Component {
             <div>
             {this.uniqueCountries.map((country) => {
                 return (
-                    <button className="m-1" onClick={this.paintBackground} style={{backgroundColor: this.state.selectedCountry === country ? "blue" : "white"}}>{country}</button>
+                    <button key={country} className="m-1" onClick={this.paintBackground} style={{backgroundColor: this.state.selectedCountry === country ? "blue" : "white"}}>{country}</button>
                 );
             })}
 
@@ -85,9 +85,9 @@ class FaceBook extends React.Component {
                 
             </form>
             
-            {this.state.profileObj.map((profile) => {
+            {this.state.profileObj.map((profile, index) => {
                 return(
-                    <div className="card mb-2 mt-2" style={{maxWidth: "540px", backgroundColor: (profile.country === this.state.selectedCountry ? "blue" : "white")}}>
+                    <div key={index} className="card mb-2 mt-2" style={{maxWidth: "540px", backgroundColor: (profile.country === this.state.selectedCountry ? "blue" : "white")}}>
                         <div className="row g-0">
                             <div className="col-md-4 d-flex justify-content-center align-items-center">
                                 <img src={profile.img}  className="img-fluid rounded-start" alt="profile"/>

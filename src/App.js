@@ -15,12 +15,11 @@ import Dice from './Components/Dice';
 import Carousel from './Components/Carousel';
 import NumbersTable from './Components/NumbersTable';
 import FaceBook from './Components/FaceBook';
-
-
+import SignupPage from './Components/SignupPage';
 
 function App() {
   return (
-    <div className="App mt-4 mb-4">
+    <div className="App mt-5 mb-5">
       <h1>Id Card</h1>
       <IdCard
         lastName='Doe'
@@ -153,6 +152,10 @@ function App() {
         <hr/>
         <h1>Facebook</h1>
         <FaceBook />
+
+        <hr/>
+        <h1>Sign up Page</h1>
+        <SignupPage />
 
 
     </div>
